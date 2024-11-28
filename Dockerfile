@@ -24,5 +24,5 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Command to run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "ecommerce-devops-poc.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "ecommerce.wsgi:application"]
 
