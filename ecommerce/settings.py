@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'products',
+    'users',
+    'orders',
 ]
 
 MIDDLEWARE = [
@@ -118,3 +121,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Directory where static files are collected for production
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Additional directories to look for static files during development
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),  # Directory for your project's static files
+]
+
